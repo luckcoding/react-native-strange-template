@@ -1,0 +1,83 @@
+{
+  "name": "react-native-strange-template",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "app/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "react-native-strange debug",
+    "test": "jest",
+    "lint": "eslint app --fix --ext .js,.ts,.tsx && yarn format",
+    "format": "npm-run-all format:*",
+    "format:js": "prettier --write \"**/*.js\"",
+    "format:json": "prettier --write \"**/*.json\"",
+    "format:md": "prettier --write \"**/*.md\"",
+    "format:ts": "prettier --write \"**/*.ts{,x}\"",
+    "commit": "node @commitlint/prompt-cli/cli.js",
+    "prepare": "husky install",
+    "pre-commit-lint": "yarn lint-staged",
+    "build-android": "react-native-strange pack --platform android --basic --module --version",
+    "build-ios": "react-native-strange pack --platform ios --basic --module --version"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "1.14.1",
+    "react": "16.14.0",
+    "react-native": "0.63.4",
+    "react-native-fast-image": "8.3.6",
+    "react-native-safe-area-context": "3.1.8",
+    "react-native-strange": "^0.1.0",
+    "react-native-svg": "12.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-decorators": "7.12.1",
+    "@babel/plugin-proposal-optional-catch-binding": "7.12.1",
+    "@babel/runtime": "^7.14.6",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@types/jest": "^26.0.23",
+    "@types/ramda": "^0.27.46",
+    "@types/react": "16.14.0",
+    "@types/react-native": "0.63.40",
+    "@types/react-test-renderer": "^16.9.2",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "8.2.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "conventional-changelog-cli": "^2.1.1",
+    "eslint": "7.15.0",
+    "eslint-config-prettier": "7.0.0",
+    "eslint-config-standard": "16.0.2",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-react": "7.21.5",
+    "eslint-plugin-react-native": "3.10.0",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.4",
+    "npm-run-all": "4.1.5",
+    "patch-package": "6.2.2",
+    "postinstall-prepare": "1.0.1",
+    "prettier": "2.2.1",
+    "reactotron-react-native": "^5.0.0",
+    "solidarity": "2.3.1",
+    "typescript": "4.2.3"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}

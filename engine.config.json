@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "depend": {
+    "android": "1.0.0",
+    "ios": "1.0.0"
+  },
+  "modulesRootPath": "./app",
+  "bundlesRootPath": "./bundle",
+  "basicsEntry": "./entry.js",
+  "useModuleIndex": true,
+  "useModuleEncrypt": true
+}

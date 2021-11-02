@@ -1,0 +1,14 @@
+{
+  "name": "sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@strange/common": "1.0.0",
+    "mobx": "^6.3.5",
+    "mobx-react-lite": "^3.2.1"
+  }
+}

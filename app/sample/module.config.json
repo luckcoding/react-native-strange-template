@@ -1,0 +1,20 @@
+{
+  "id": 98,
+  "name": "样例",
+  "prefix": "sample",
+  "version": "0.0.1",
+  "screens": [
+    {
+      "id": 1,
+      "prefix": "page1",
+      "deeplink": "sample/one",
+      "path": "./sample-page-1.tsx"
+    },
+    {
+      "id": 2,
+      "prefix": "page2",
+      "deeplink": "sample/two",
+      "path": "./sample-page-2.tsx"
+    }
+  ]
+}
