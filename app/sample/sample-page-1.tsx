@@ -4,7 +4,7 @@ import React, { useEffect } from "react"
 
 const Page: Strange.FC<{}> = (props) => {
   useEffect(() => {
-    log(`create ReactRootView: ${Date.now() - Number(props.surfaceID)}`)
+    log(`create ReactRootView: ${Date.now() - Number(props.timestamp)}`)
   }, [])
   return (
     <React.Fragment>

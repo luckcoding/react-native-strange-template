@@ -17,14 +17,15 @@
     "format:ts": "prettier --write \"**/*.ts{,x}\"",
     "commit": "node @commitlint/prompt-cli/cli.js",
     "prepare": "husky install",
+    "postinstall": "node ./bin/postInstall",
     "pre-commit-lint": "yarn lint-staged",
     "build-android": "react-native-strange pack --platform android --basic --module --version",
     "build-ios": "react-native-strange pack --platform ios --basic --module --version"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "1.14.1",
-    "react": "16.14.0",
-    "react-native": "0.63.4",
+    "react": "^17.0.2",
+    "react-native": "^0.66.1",
     "react-native-fast-image": "8.3.6",
     "react-native-safe-area-context": "3.1.8",
     "react-native-strange": "^0.1.0",
@@ -41,8 +42,8 @@
     "@types/jest": "^26.0.23",
     "@types/ramda": "^0.27.46",
     "@types/react": "16.14.0",
-    "@types/react-native": "0.63.40",
-    "@types/react-test-renderer": "^16.9.2",
+    "@types/react-native": "0.65.0",
+    "@types/react-test-renderer": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^4.29.0",
     "@typescript-eslint/parser": "^4.29.0",
     "babel-jest": "^26.6.3",
@@ -63,11 +64,15 @@
     "lint-staged": "^10.5.4",
     "npm-run-all": "4.1.5",
     "patch-package": "6.2.2",
-    "postinstall-prepare": "1.0.1",
+    "postinstall-prepare": "^2.0.0",
     "prettier": "2.2.1",
+    "react-test-renderer": "^17.0.2",
     "reactotron-react-native": "^5.0.0",
     "solidarity": "2.3.1",
     "typescript": "4.2.3"
+  },
+  "resolutions": {
+    "@types/react": "^17"
   },
   "jest": {
     "preset": "react-native",
